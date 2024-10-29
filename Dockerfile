@@ -8,7 +8,7 @@
 ARG fedora_release=latest
 FROM fedora:${fedora_release}
 
-RUN sudo dnf makecache --refresh && sudo dnf -y install rpm-build cmake ninja-build git gcc g++ SDL2-devel SDL2_ttf-devel SDL2_image-devel flac-devel libmpg123-devel libpng-devel libmpeg2-devel libserialport-devel portmidi-devel libenet-devel
+RUN sudo dnf makecache --refresh && sudo dnf -y install rpm-build cmake ninja-build git gcc g++ SDL2-devel SDL2_ttf-devel SDL2_image-devel flac-devel libmpg123-devel libpng-devel libmpeg2-devel libserialport-devel portmidi-devel enet-devel
 
 WORKDIR /build
 
