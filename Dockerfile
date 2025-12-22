@@ -12,7 +12,7 @@ LABEL maintainer="Dimitris Panokostas"
 LABEL description="Image with the requirements to build Amiberry for Fedora x86_64"
 
 RUN sudo dnf makecache --refresh \
-    && sudo dnf -y install rpm-build cmake ninja-build git gcc g++ SDL2-devel SDL2_ttf-devel SDL2_image-devel flac-devel libmpg123-devel libpng-devel libmpeg2-devel libserialport-devel portmidi-devel enet-devel libpcap-devel libzstd-devel \
+    && sudo dnf -y install rpm-build cmake ninja-build git gcc g++ SDL2-devel SDL2_ttf-devel SDL2_image-devel flac-devel libmpg123-devel libpng-devel libmpeg2-devel libserialport-devel portmidi-devel enet-devel libpcap-devel libzstd-devel glew-devel \
     && dnf clean all \
     && rm -rf /var/cache/dnf
 
