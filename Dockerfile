@@ -4,8 +4,8 @@
 # Usage: docker run --rm -it -v <path-to-amiberry-sources>:/build amiberry-fedora-x86_64:latest
 #
 
-# If no arg is provided, default to latest
-ARG fedora_release=latest
+# Match Amiberry release CI; override with --build-arg fedora_release=<version> when bumping.
+ARG fedora_release=44
 FROM fedora:${fedora_release}
 
 LABEL org.opencontainers.image.title="Amiberry build environment (Fedora x86_64)"
